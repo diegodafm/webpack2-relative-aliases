@@ -45,6 +45,9 @@ const WebpackRelativeAliases = require('webpack-relative-aliases');
 #### relativeAliases
 Let's suppouse that you want to overwrite `./index.js: /your/new/path/index.js`, webpack-relative-aliases then, will search all entrances of `./index.js` and overwrite to `/your/new/path/index.js`
 
+#### debug
+The debug mode has an output message or all aliases that has been matched and overwritten
+
 ### Examples 
 
 #### Simple reference
@@ -100,7 +103,3 @@ plugins: [
 ```
 Notice that when overwriting a module/folder you need to specify the `index.js` which is the main file that webpack is referring to.
 
----
-
-#### debug
-The debug mode has an output message or all aliases that has been matched and overwritten
