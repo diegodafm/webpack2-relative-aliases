@@ -1,7 +1,7 @@
 # Webpack2RelativeAliases - Plugin
 Webpack by default does not support overwriting relative paths, then, Webpack2RelativeAliases was designed overwrite relative paths whenever the application is compiling.
 
-Just in case you are using webpack 1.x, you should use [webpack-relative-aliases](webpack-relative-aliases) instead.
+Just in case you are using webpack 1.x, you should use [webpack-relative-aliases](https://github.com/diegodafm/webpack-relative-aliases) instead.
  
  ```javascript
  
