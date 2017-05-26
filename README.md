@@ -1,10 +1,12 @@
-# WebpackRelativeAliases - Plugin
-Webpack by default does not support overwriting relative paths, then, WebpackRelativeAliases was designed overwrite relative paths whenever the application is compiling.
+# Webpack2RelativeAliases - Plugin
+Webpack by default does not support overwriting relative paths, then, Webpack2RelativeAliases was designed overwrite relative paths whenever the application is compiling.
+
+Just in case you are using webpack 1.x, you should use [webpack-relative-aliases](webpack-relative-aliases) instead.
  
  ```javascript
  
  plugins: [
-    new WebpackRelativeAliases({
+    new Webpack2RelativeAliases({
         relativeAliases: {
             // simple relative overwrite
             './example.js': '/full/path/to/your/file.js',
@@ -17,7 +19,7 @@ Webpack by default does not support overwriting relative paths, then, WebpackRel
             // example of module considering the context
             './../example': {
                 fromContext: 'specific/path/you/want/to/overwrite',
-                alias: '/full/path/to/your/module/'
+                alias: '/full/path/to/your/module/index.js'
             },
        },
        debug: true
@@ -33,13 +35,13 @@ It's allow you to set a key value: alias and new path respectfully.
 First of all install node module:
  
 ```bash
-$ npm install webpack-relative-aliases --save-dev
+$ npm install webpack2-relative-aliases --save-dev
 ```
 
 Add In your webpack.config.js the following script and then start create an instance of `WebpackRelativeAliases` setting your own relative aliases.
 
 ```javascript
-const WebpackRelativeAliases = require('webpack-relative-aliases');
+const Webpack2RelativeAliases = require('webpack2-relative-aliases');
 ```
 
 #### relativeAliases
@@ -53,7 +55,7 @@ The debug mode has an output message or all aliases that has been matched and ov
 #### Simple reference
 ```javascript
 plugins: [
-    new WebpackRelativeAliases({
+    new Webpack2RelativeAliases({
         relativeAliases: {
             './example.js': '/full/path/to/your/file.js'
         },
@@ -71,7 +73,7 @@ In order to avoid this problem, you may have to consider also what is the contex
 
 ```javascript
 plugins: [
-    new WebpackRelativeAliases({
+    new Webpack2RelativeAliases({
         relativeAliases: {
             './index.js': {
                 fromContext: 'specific/path/you/want/to/overwrite',
@@ -90,7 +92,7 @@ In this case, the alias `./index.js` is considered to overwrite when the context
 
 ```javascript
 plugins: [
-    new WebpackRelativeAliases({
+    new Webpack2RelativeAliases({
         relativeAliases: {
             './module-example/': {
                 fromContext: 'specific/path/you/want/to/overwrite',
