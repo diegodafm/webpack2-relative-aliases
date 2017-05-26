@@ -1,11 +1,11 @@
 /**
- * WebpackRelativeAliases - Plugin
- * Webpack by default does not support overwriting relative paths, then, WebpackRelativeAliases was designed
+ * Webpack2RelativeAliases - Plugin
+ * Webpack by default does not support overwriting relative paths, then, Webpack2RelativeAliases was designed
  * overwrite relative paths whenever the application is compiling.
  *
  * @example
  *  plugins: [
- *       new WebpackRelativeAliases({
+ *       new Webpack2RelativeAliases({
  *           relativeAliases: {
  *               // simple relative overwrite
  *               './example.js': '/full/path/to/your/file.js',
